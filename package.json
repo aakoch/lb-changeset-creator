@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "bootstrap-vue": "^2.21.2",
+    "vue": "^2.6.12"
+  },
+  "name": "bootstrap-vue",
+  "version": "0.1.0",
+  "description": "Playing with Bootstrap Vue",
+  "main": "index.js",
+  "author": "Adam Koch <github2@adamkoch.com>",
+  "license": "MIT"
+}
