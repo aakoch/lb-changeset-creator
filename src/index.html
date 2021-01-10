@@ -20,8 +20,8 @@
     <div>
     <changeset v-for="changeset in changeSets"
                v-bind:key="changeset.id"
-               v-bind:id="this.id + '-' + changeset.id"
-               v-bind:author="this.author"
+               v-bind:id="id + '-' + changeset.id"
+               v-bind:author="author"
                v-bind:labelsattribute="labelsattribute"></changeset>
     </div>
    

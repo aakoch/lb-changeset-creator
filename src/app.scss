@@ -2,6 +2,10 @@
 // $body-bg: #000;
 // $body-color: #111;
 
+// Then import Bootstrap an BootstrapVue SCSS files (order is important)
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+
 .demo {
   font-family: sans-serif;
   border: 1px solid #eee;
@@ -24,6 +28,8 @@ detail {
 
 ul {
   list-style: none;
+  padding-inline-start: 10px;
+  margin-bottom: 0;
 }
 
 .changeset, detail, .detail {
@@ -34,7 +40,3 @@ ul {
   margin-top: 1em;
   font-family: monospace;
 }
-
-// Then import Bootstrap an BootstrapVue SCSS files (order is important)
-@import '~bootstrap/scss/bootstrap.scss';
-@import '~bootstrap-vue/src/index.scss';

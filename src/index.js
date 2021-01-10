@@ -52,7 +52,7 @@ Vue.component('command', {
 })
 
 Vue.component('changeset', {
-  data() {
+  data: function () {
     return {
       tablename: 'TABLE_1',
       columnname: 'COLUMN_1',
