@@ -1,13 +1,24 @@
 {
+  "name": "lb-changeset-creator",
+  "version": "0.1.0",
+  "description": "Liquibase Changeset Creator",
+  "main": "index.js",
+  "author": "Adam Koch <github2@adamkoch.com>",
+  "license": "MIT",
+  "scripts": {
+    "run": "parcel src/index.html",
+    "build": "parcel build index.pug --public-url ./"
+  },
   "dependencies": {
     "bootstrap": "^4.5.3",
     "bootstrap-vue": "^2.21.2",
     "vue": "^2.6.12"
   },
-  "name": "bootstrap-vue",
-  "version": "0.1.0",
-  "description": "Playing with Bootstrap Vue",
-  "main": "index.js",
-  "author": "Adam Koch <github2@adamkoch.com>",
-  "license": "MIT"
+  "alias": {
+    "vue" : "./node_modules/vue/dist/vue.common.js"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.32.0"
+  }
 }

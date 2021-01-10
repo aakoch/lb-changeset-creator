@@ -1,0 +1,40 @@
+// Define variable defaults
+// $body-bg: #000;
+// $body-color: #111;
+
+.demo {
+  font-family: sans-serif;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  padding: 20px 30px;
+  margin-top: 1em;
+  margin-bottom: 40px;
+  user-select: none;
+  overflow-x: auto;
+}
+
+label {
+	margin-right: 10px;
+}
+
+detail {
+	display: block;
+}
+
+
+ul {
+  list-style: none;
+}
+
+.changeset, detail, .detail {
+	margin: 8px;
+}
+
+.changeset {
+  margin-top: 1em;
+  font-family: monospace;
+}
+
+// Then import Bootstrap an BootstrapVue SCSS files (order is important)
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';

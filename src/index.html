@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="styesheet" src="./app.scss">
+  </head>
+<body>
+
+  <div id="vue-app" class="demo container">
+    <div>
+      <label>Author:</label> <input v-model="author" />
+    </div>
+    <div>
+      <label>Ticket Number:</label> <input v-model="id" />
+    </div>
+    <div>
+      <button v-on:click="createChangeset" v-if=!showChangesetInput class="btn btn-primary">Create Change Set</button>
+    </div>
+  
+    <div>
+    <changeset v-for="changeset in changeSets"
+               v-bind:key="changeset.id"
+               v-bind:id="this.id + '-' + changeset.id"
+               v-bind:author="this.author"
+               v-bind:labelsattribute="labelsattribute"></changeset>
+    </div>
+   
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>

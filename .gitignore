@@ -1,3 +1,5 @@
 node_modules
 bootstrap-vue-v0.1.0.tgz
 yarn-error.log
+.cache
+dist
