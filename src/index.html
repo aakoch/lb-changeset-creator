@@ -9,10 +9,51 @@
 
   <div id="vue-app" class="demo container">
     <div>
-      <label>Author:</label> <input v-model="author" />
+      
+      <b-form-group
+        id="fieldset-1"
+        description="Change set author's full name"
+        label="Author"
+        label-for="author-input"
+        :invalid-feedback="invalidFeedback"
+        :state="state"
+        content-cols
+        label-cols="2"
+        label-cols-sm="3"
+        label-cols-xxl="1"
+        >
+        <b-form-input id="author-input" v-model="author" :state="state" trim></b-form-input>
+      </b-form-group>
+
+
     </div>
-    <div>
-      <label>Ticket Number:</label> <input v-model="id" />
+    <div>      
+      <b-form-group
+        id="fieldset-2"
+        description="JIRA Ticket Number"
+        label="Ticket Number"
+        label-for="ticket-id-input"
+        content-cols
+        label-cols="2"
+        label-cols-sm="3"
+        label-cols-xxl="1"
+        >
+        <b-form-input id="ticket-id-input" v-model="id" trim></b-form-input>
+      </b-form-group>
+
+      <b-form-group
+        id="fieldset-3"
+        description="Labels can be used to only run a changeset in a specific environment"
+        label="Labels"
+        label-for="labels-id-input"
+        content-cols
+        label-cols="2"
+        label-cols-sm="3"
+        label-cols-xxl="1"
+        >
+        <b-form-input id="labels-id-input" v-model="labels" trim></b-form-input>
+      </b-form-group>
+
     </div>
     <div>
       <button v-on:click="createChangeset" v-if=!showChangesetInput class="btn btn-primary">Create Change Set</button>
@@ -23,7 +64,7 @@
                v-bind:key="changeset.id"
                v-bind:id="id + '-' + changeset.id"
                v-bind:author="author"
-               v-bind:labelsattribute="labelsattribute"></changeset>
+               v-bind:labels="labels"></changeset>
     </div>
    
   </div>

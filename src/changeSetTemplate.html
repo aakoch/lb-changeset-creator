@@ -1,0 +1,14 @@
+<fieldset>
+  <div v-if=!this.isSet>
+    <label>Table name:</label> <input v-model="tablename" />
+    <br>
+    <label>Column name:</label> <input v-model="columnname" />
+  </div>
+
+  
+  <div class="changeset">&lt;changeSet id="ID-{{id}}" author="{{author}}"<span v-if="labels"> labels="{{labels}}"</span>&gt;
+    <command v-bind:columnname="columnname" v-bind:tablename="tablename" />
+    &lt;/changeSet&gt;
+  </div>
+  <div v-if=!this.isSet><button v-on:click="addChangeset" class="btn btn-primary">Commit</button></div>
+</fieldset>

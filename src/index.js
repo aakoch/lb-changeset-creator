@@ -2,6 +2,7 @@ import Vue from 'vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
 import './app.scss'
+import ChangeSetTemplate from './changeSetTemplate.html'
 
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)
@@ -15,10 +16,10 @@ const HelloVueApp = {
   data() {
     return {
       id: '00001',
-      author: 'Adam Koch',
+      author: '',
       changeSets: [],
       showChangesetInput: false,
-      labelsattribute: ' labels="DEV1, DEV2"'
+      labels: ''
     }
   },
   
@@ -59,20 +60,8 @@ Vue.component('changeset', {
       isSet: false
     }
   },
-  props: ['id', 'author', 'labelsattribute'],
-  template: `
-    <fieldset>
-    <div v-if=!this.isSet>
-      <label>Table name:</label> <input v-model="tablename" />
-    <br>
-      <label>Column name:</label> <input v-model="columnname" />
-    </div>
-    
-    <div class="changeset">&lt;changeSet id="ID-{{id}}" author="{{author}}"{{labelsattribute}}&gt;
-  <command v-bind:columnname="columnname" v-bind:tablename="tablename"/>
-    &lt;/changeSet&gt;</div>
-    <div v-if=!this.isSet><button v-on:click="addChangeset" class="btn btn-secondary">Commit</button></div>
-    </fieldset>`,
+  props: ['id', 'author', 'labels'],
+  template: ChangeSetTemplate,
   methods: {
     addChangeset: function () {
       console.log(this.isSet)
