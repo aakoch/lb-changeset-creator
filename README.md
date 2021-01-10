@@ -1,8 +1,8 @@
-# Liquibase Change Set Generator
+# Liquibase Changeset Generator
 
 ## Introduction
 
-> This was a way of me learning Vue.js and Bootstap-Vue but also something I wish we had at work to make creating Liquibase change sets easier.
+> This was a way of me learning [Vue.js](https://vuejs.org/) and [Bootstap-Vue](https://bootstrap-vue.org/) but also something I wish we had at work to make creating [Liquibase](https://www.liquibase.org/) [change sets](https://docs.liquibase.com/change-types/home.html) easier.
 
 ## Usage
 
