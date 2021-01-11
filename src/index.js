@@ -19,7 +19,8 @@ const HelloVueApp = {
       author: '',
       changeSets: [],
       showChangesetInput: false,
-      labels: ''
+      labels: 'test',
+      output: ''
     }
   },
   
@@ -33,6 +34,9 @@ const HelloVueApp = {
           id: i++, 
           set: false
         })
+      },
+      callsomething: function (content) {
+        console.dir(content)
       }
   }
 }
@@ -57,14 +61,13 @@ Vue.component('changeset', {
     return {
       tablename: 'TABLE_1',
       columnname: 'COLUMN_1',
-      isSet: false
+      isSet: false,
     }
   },
   props: ['id', 'author', 'labels'],
   template: ChangeSetTemplate,
   methods: {
-    addChangeset: function () {
-      console.log(this.isSet)
+    commit: function () {
       this.isSet = true
     }
   }

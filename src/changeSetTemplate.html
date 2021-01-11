@@ -10,5 +10,5 @@
     <command v-bind:columnname="columnname" v-bind:tablename="tablename" />
     &lt;/changeSet&gt;
   </div>
-  <div v-if=!this.isSet><button v-on:click="addChangeset" class="btn btn-primary">Commit</button></div>
+  <div v-if=!this.isSet><button v-on:click="$emit('commit', this)" class="btn btn-primary">Commit</button></div>
 </fieldset>
